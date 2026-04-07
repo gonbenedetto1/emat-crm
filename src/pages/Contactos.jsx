@@ -1,3 +1,4 @@
+
 import { useState, useMemo } from "react";
 import { base44 } from "@/api/base44Client";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
@@ -114,8 +115,8 @@ export default function Contactos() {
 
   const handleMessageSent = ({ contacto: c, mensaje }) => {
   // Buscar la etapa con orden 1, si no existe entonces orden 0, si tampoco existe tomar la primera
-  const primeraEtapa = pipelineStages.find(s => s.orden === 1)?.nombre 
-    || pipelineStages.find(s => s.orden === 0)?.nombre 
+  const primeraEtapa = pipelineStages.find(s => s.orden === 1)?.nombre
+    || pipelineStages.find(s => s.orden === 0)?.nombre
     || pipelineStages[0]?.nombre;
 
   if (!primeraEtapa) {
@@ -458,3 +459,4 @@ export default function Contactos() {
     </div>
   );
 }
+
